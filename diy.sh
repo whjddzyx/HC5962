@@ -20,6 +20,7 @@ adguardhome_url='https://github.com/rufengsuixing/luci-app-adguardhome.git' # ad
 #插件源码
 wifischedule_url='https://github.com/newkit/luci-app-wifischedule.git' # wifi计划插件地址
 autoreboot_url='https://github.com/awesome-openwrt/luci-app-autoreboot.git' #高级重启插件地址
+unblockmusic_url='https://github.com/maxlicheng/luci-app-unblockmusic.git' #网易云音乐解锁地址
  
  
 #修改机器名称
@@ -151,8 +152,9 @@ echo 'CONFIG_PACKAGE_luci-app-autoreboot=y' >> .config
 
 
 
-
-
+echo '添加网易云音乐解锁最新版本'
+git clone $unblockmusic_url package/lean/luci-app-unblockmusic
+echo 'CONFIG_PACKAGE_luci-app-unblockmusic=y' >> .config
 
 
 
