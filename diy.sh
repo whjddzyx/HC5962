@@ -15,7 +15,7 @@ default_theme='argon_mc2'   # 默认主题 结合主题文件夹名字
 theme_argon='https://github.com/sypopo/luci-theme-argon-mc.git'  # 主题地址
 openClash_url='https://github.com/vernesong/OpenClash.git'       # OpenClash包地址 
 lienol_url='https://github.com/Lienol/openwrt-package.git'       # Lienol 包地址
-#adguardhome_url='https://github.com/rufengsuixing/luci-app-adguardhome.git' # adguardhome 包地址
+adguardhome_url='https://github.com/rufengsuixing/luci-app-adguardhome.git' # adguardhome 包地址
 
 #插件源码
 wifischedule_url='https://github.com/newkit/luci-app-wifischedule.git' # wifi计划插件地址
@@ -100,10 +100,10 @@ echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
 echo 'CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y'  >> .config
 
 #---------------adguardhome无法启动暂时去掉-------------------------
-#echo '添加adguardhome'
-#git clone $adguardhome_url package/lean/luci-app-adguardhome
-#echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
-#echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
+echo '添加adguardhome'
+git clone $adguardhome_url package/lean/luci-app-adguardhome
+echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
+echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
 
 
 echo '添加amule插件'
