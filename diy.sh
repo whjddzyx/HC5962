@@ -17,6 +17,11 @@ openClash_url='https://github.com/vernesong/OpenClash.git'       # OpenClash包�
 lienol_url='https://github.com/Lienol/openwrt-package.git'       # Lienol 包地址
 adguardhome_url='https://github.com/rufengsuixing/luci-app-adguardhome.git' # adguardhome 包地址
 
+#插件源码
+wifischedule_url='https://github.com/newkit/luci-app-wifischedule.git' # wifi计划插件地址
+autoreboot_url='https://github.com/awesome-openwrt/luci-app-autoreboot.git' #高级重启插件地址
+luci-app-qos-gargoyle_url='https://github.com/kuoruan/luci-app-qos-gargoyle.git' #石像鬼Qos地址
+
  
 #修改机器名称
 echo "设置主机名"
@@ -71,50 +76,55 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
 echo '添加OpenClash'
-
 git clone $openClash_url package/lean/luci-app-openclash 
-#  OpenClash
-
 echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
-
 echo 'CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y'  >> .config
 
 
- echo '添加adguardhome'
-
- git clone $adguardhome_url package/lean/luci-app-adguardhome
-
- echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
-
- echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
+echo '添加adguardhome'
+git clone $adguardhome_url package/lean/luci-app-adguardhome
+echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
+echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
 
 
+echo '添加amule插件'
+echo 'CONFIG_PACKAGE_luci-app-amule=y' >> .config
 
 
+echo '添加wifi计划插件'
+git clone $wifischedule_url package/lean/luci-app-wifischedule
+echo 'CONFIG_PACKAGE_luci-app-wifischedule=y' >> .config
 
 
-echo '添加Passwall'
+echo '添加高级重启插件'
+git clone $autoreboot_url package/lean/luci-app-autoreboot
+echo 'CONFIG_PACKAGE_luci-app-autoreboot=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-app-passwall=y' >> .config
+ 
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y' >> .config
+#echo '添加Passwall'
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y' >> .config
 
-echo 'CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y'  >> .config
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y' >> .config
+
+#echo 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun=y' >> .config
+
+#echo 'CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y'  >> .config
+
+echo '添加石像鬼QOS插件'
+git clone $luci-app-qos-gargoyle_url package/lean/luci-app-qos-gargoyle
+echo 'CONFIG_PACKAGE_luci-app-qos-gargoyle=y' >> .config
 
 
-
-echo '添加主题'
-echo 'CONFIG_PACKAGE_luci-theme-netgear=y'  >> .config
 
 
 
