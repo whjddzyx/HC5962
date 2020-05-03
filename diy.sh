@@ -63,8 +63,8 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
 
-echo "修改默认主题"
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+#echo "修改默认主题"
+#sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
 
 
 
@@ -100,14 +100,22 @@ echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
 echo 'CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y'  >> .config
 
 #---------------adguardhome无法启动暂时去掉-------------------------
-echo '添加adguardhome'
-git clone $adguardhome_url package/lean/luci-app-adguardhome
-echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
-echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
+#echo '添加adguardhome'
+#git clone $adguardhome_url package/lean/luci-app-adguardhome
+#echo 'CONFIG_PACKAGE_luci-app-adguardhome=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y'  >> .config
 
 
 echo '添加amule插件'
 echo 'CONFIG_PACKAGE_luci-app-amule=y' >> .config
+
+
+
+
+echo '添加wrtbwmon插件'
+echo 'CONFIG_PACKAGE_luci-app-wrtbwmon=y' >> .config
+
+
 
 
 echo '添加wifi计划插件'
