@@ -42,8 +42,8 @@ sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.
 
 
 echo "修改默认主题"
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
-
+#sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/base/root/etc/config
 
 if [ $delete_bootstrap ] ;then
 
