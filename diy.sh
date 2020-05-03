@@ -46,23 +46,23 @@ sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.
 
 
 
-echo "修改默认主题"
+#echo "修改默认主题"
 #sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/base/root/etc/config
+#sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/base/root/etc/config
 
-if [ $delete_bootstrap ] ;then
+#if [ $delete_bootstrap ] ;then
 
-  echo "去除默认bootstrap主题"
+#  echo "去除默认bootstrap主题"
 
-  sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
+ # sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
 
-  sed -i '/\+luci-theme-bootstrap/d' package/feeds/luci/luci/Makefile
+#  sed -i '/\+luci-theme-bootstrap/d' package/feeds/luci/luci/Makefile
 
-  sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
+#  sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
 
-  sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+ # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
-fi
+# fi
 
 
 
