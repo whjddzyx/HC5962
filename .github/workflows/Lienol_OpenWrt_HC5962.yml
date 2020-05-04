@@ -18,7 +18,7 @@ on:
     paths:
       - 'Lienol_OpenWrt_HC5962.config'
   schedule:
-    - cron: 0 8 * * 5
+    - cron: 0 19 * * *
   watch:
     types: started
 
