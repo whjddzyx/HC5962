@@ -65,10 +65,7 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
 echo "修改默认主题"
-#修改主题方法1
-sed -i "s/bootstrap_mod/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
-
-#sed -i "s/bootstrap_mod/$default_theme/g" package/default-settings/files/zzz-default-settings
+sed -i "s/bootstrap_mod/$default_theme/g" package/default-settings/files/zzz-default-settings
 
 
 
