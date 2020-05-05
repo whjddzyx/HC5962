@@ -11,7 +11,7 @@ wifi_name='HiWiFi'
 lan_ip='192.168.199.1'        # Lan Ip地址
 utc_name='Asia\/Shanghai'   # 时区
 delete_bootstrap=true       # 是否删除默认主题 true 、false
-default_theme='argon_mc2'   # 默认主题 结合主题文件夹名字 
+default_theme='darkmatter'   # 默认主题 结合主题文件夹名字 
 theme_argon='https://github.com/sypopo/luci-theme-argon-mc.git'  # 主题地址
 openClash_url='https://github.com/vernesong/OpenClash.git'       # OpenClash包地址 
 lienol_url='https://github.com/Lienol/openwrt-package.git'       # Lienol 包地址
@@ -49,11 +49,11 @@ sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.
 
 
 
-echo '添加主题argon'
+#echo '添加主题argon'
 
-git clone $theme_argon package/lean/luci-theme-argon-mc
+#git clone $theme_argon package/lean/luci-theme-argon-mc
 
-echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
+#echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
 
