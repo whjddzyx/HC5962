@@ -64,8 +64,13 @@ echo 'CONFIG_PACKAGE_luci-theme-argon-mc=y' >> .config
 
 
 
-echo "修改默认主题"
+echo '修改默认主题'
 sed -i "s/bootstrap_mod/$default_theme/g" package/default-settings/files/zzz-default-settings
+
+
+
+#echo '添加本地域名访问路由器管理页面'
+#sed -i "/127.0.0.1 localhost/a $lan_ip $device_name" package/base-files/files/etc/hosts
 
 
 
