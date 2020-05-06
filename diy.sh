@@ -117,8 +117,8 @@ echo 'CONFIG_PACKAGE_luci-app-amule=y' >> .config
 
 
 
-echo '添加wrtbwmon插件'
-echo 'CONFIG_PACKAGE_luci-app-wrtbwmon=y' >> .config
+#echo '添加wrtbwmon插件'
+#echo 'CONFIG_PACKAGE_luci-app-wrtbwmon=y' >> .config
 
 
 
