@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Lean_LEDE_B70_NANO
+name: Build Lean_LEDE_B70
 
 on:
   repository_dispatch:
@@ -16,19 +16,19 @@ on:
     branches:
       - master
     paths:
-      - 'Lean_LEDE_B70_NANO.config'
+      - 'Lean_LEDE_B70.config'
   schedule:
     - cron: 0 19 * * *
   watch:
     types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/coolsnowwolf/openwrt
+  REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Lean_LEDE_B70_NANO.config
-  DIY_P1_SH: diy-part3.sh
-  DIY_P2_SH: diy-part4.sh
+  CONFIG_FILE: Lean_LEDE_B70.config
+  DIY_P1_SH: diy-part1.sh
+  DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true

@@ -3,10 +3,11 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
+# 5.4内核固件生成
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Lean_LEDE_B70
+name: Build Lean_LEDE_B70_5.4
 
 on:
   repository_dispatch:
