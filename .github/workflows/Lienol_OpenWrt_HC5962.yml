@@ -21,9 +21,7 @@ on:
     - cron: 0 19 * * *
   watch:
     types: started
-
-
- env:
+env:
   REPO_URL:  https://github.com/Lienol/openwrt
   REPO_BRANCH: dev-19.07
   FEEDS_CONF: feeds.conf.default
