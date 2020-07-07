@@ -3,11 +3,10 @@
 # Description: Build OpenWrt using GitHub Actions
 # Lisence: MIT
 # Author: P3TERX
-# 5.4内核固件生成
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Lean_LEDE_B70_5.4
+name: Build Lienol_HC5962_19_07
 
 on:
   repository_dispatch:
@@ -17,17 +16,16 @@ on:
     branches:
       - master
     paths:
-      - 'Lean_LEDE_B70.config'
+      - 'Lienol_OpenWrt_HC5962.config'
   schedule:
     - cron: 0 19 * * *
   watch:
     types: started
-
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL:  https://github.com/Lienol/openwrt
+  REPO_BRANCH: dev-19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Lean_LEDE_B70.config
+  CONFIG_FILE: Lienol_OpenWrt_HC5962.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
@@ -151,3 +149,4 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
+
