@@ -36,6 +36,6 @@ echo "修改wifi名称"
 sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 echo '添加OpenClash'
-git clone $openClash_url package/lean/luci-app-openclash 
+git clone -master $openClash_url package/lean/luci-app-openclash 
 echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
 echo 'CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y'  >> .config
