@@ -7,7 +7,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Lean_LEDE_B70_5.4
+name: Build Lean_B70_5.4_WithSS
 
 on:
   repository_dispatch:

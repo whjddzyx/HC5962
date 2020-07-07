@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Build Lienol_HC5962
+name: Build Lienol_HC5962_WithSS
 
 on:
   repository_dispatch:
