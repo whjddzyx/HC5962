@@ -12,6 +12,7 @@ device_name='HC5962'
 wifi_name='HiWiFi'
 lan_ip='192.168.199.1'        # Lan Ip地址
 utc_name='Asia\/Shanghai'   # 时区
+openClash_url='https://github.com/vernesong/OpenClash.git'       # OpenClash包地址 
 
 
  
@@ -33,3 +34,8 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" packa
 echo "修改wifi名称"
 
 sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+echo '添加OpenClash'
+git clone $openClash_url package/lean/luci-app-openclash 
+echo 'CONFIG_PACKAGE_luci-app-openclash=y' >> .config
+echo 'CONFIG_PACKAGE_luci-i18n-openclash-zh-cn=y'  >> .config
