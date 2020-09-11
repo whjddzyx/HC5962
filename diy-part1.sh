@@ -25,5 +25,3 @@ sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 #git clone https://github.com/vernesong/OpenClash.git                                package/molun/luci-app-openclash
 
 #mv -vf ./02_network ./target/linux/ramips/mt7621/base-files/etc/board.d/02_network
-
-rm -rf ./target/linux/ramips/mt7621/base-files/etc/board.d/02_network && cd .. && cp -f ./02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/ && cd openwrt
