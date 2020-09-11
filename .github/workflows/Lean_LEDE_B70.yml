@@ -15,13 +15,13 @@ on:
     types: published
   push:
     branches:
-      - master
+      - 20200416
     paths:
       - 'Lean_LEDE_B70.config'
   #schedule:
    # - cron: 0 19 * * *
-  #watch:
-    #types: started
+  watch:
+    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
