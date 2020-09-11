@@ -22,8 +22,8 @@ on:
   #watch:
   #  types: started
 env:
-  REPO_URL:  https://github.com/whjddzyx/Lienol
-  REPO_BRANCH: dev-19.07
+  REPO_URL:  https://github.com/whjddzyx/openwrt
+  REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Lienol_OpenWrt_HC5962.config
   DIY_P1_SH: diy-part1.sh
