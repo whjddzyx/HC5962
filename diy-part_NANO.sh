@@ -8,12 +8,12 @@
 # Blog: https://p3terx.com
 #============================================================
 
-device_name='HC5962'
-wifi_name='HiWiFi'
-lan_ip='192.168.199.1'        # Lan Ip地址
+device_name='E8820S'
+wifi_name='ZET'
+lan_ip='192.168.8.1'        # Lan Ip地址
 utc_name='Asia\/Shanghai'   # 时区
 
-
+mv -vf ../02_network ./target/linux/ramips/mt7621/base-files/etc/board.d/02_network
  
 #修改机器名称
 echo "设置主机名"
