@@ -16,8 +16,8 @@
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
 # Define My Package
 #git clone https://github.com/fw876/helloworld.git                                   package/molun/luci-app-ssr-plus
