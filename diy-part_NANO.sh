@@ -32,4 +32,8 @@ echo "修改wifi名称"
 
 sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
+echo "替换文件"
+
+rm -rf ./target/linux/ramips/mt7621/base-files/etc/board.d/02_network && cd .. && cp -f ./02_network openwrt/target/linux/ramips/mt7621/base-files/etc/board.d/ && cd openwrt
+
 
